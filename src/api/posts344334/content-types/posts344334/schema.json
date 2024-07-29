@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts3434",
+  "info": {
+    "singularName": "posts344334",
+    "pluralName": "posts3434",
+    "displayName": "Posts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::authors43434.authors43434",
+      "inversedBy": "posts"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categories23232.categories23232",
+      "inversedBy": "posts"
+    }
+  }
+}
